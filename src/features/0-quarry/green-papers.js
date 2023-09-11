@@ -27,7 +27,7 @@ UPGRADES.GreenPapers = {
         return Decimal.pow(1.4, lvl).mul(1);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
-      max: 150,
+      max: 250,
       desc(eff) {
         return `Miner effectiveness is increased by ${formatChange(eff)}<br>`;
       },
@@ -39,7 +39,7 @@ UPGRADES.GreenPapers = {
         return Decimal.pow(1.4, lvl).mul(1);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
-      max: 150,
+      max: 250,
       desc(eff) {
         return `Miner speed is increased by ${formatChange(eff)}`;
       },
