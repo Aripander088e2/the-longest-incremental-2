@@ -24,7 +24,7 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Miner Power",
       cost: (lvl) => {
-        return Decimal.pow(1.4, lvl).mul(1);
+        return Decimal.pow(1.25, lvl).mul(1);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
       max: 250,
@@ -36,7 +36,7 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Speed Mining",
       cost: (lvl) => {
-        return Decimal.pow(1.4, lvl).mul(1);
+        return Decimal.pow(1.25, lvl).mul(1);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
       max: 250,
@@ -48,7 +48,7 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "Fortune Mining",
-      cost: (lvl) => Decimal.pow(1.85, lvl).mul(100),
+      cost: (lvl) => Decimal.pow(1.35, lvl).mul(100),
       eff: (lvl) => D(lvl).div(10).add(1),
       max: 20,
       desc(eff) {
@@ -79,9 +79,9 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "Ore Luck",
-      cost: (lvl) => Decimal.pow(2.25, lvl).mul(4000),
+      cost: (lvl) => Decimal.pow(1.35, lvl).mul(1000),
       eff: (lvl) => D(lvl).div(20).add(1),
-      max: 20,
+      max: 200,
       desc(eff) {
         return `Ores spawn ${formatChange(eff)} more frequently`;
       },
@@ -140,7 +140,7 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "More Pain, Ore Gain",
-      cost: () => D(50000000),
+      cost: () => D(12000000),
       eff: () => D(10).pow(D(player.quarry.depth).sub(75).div(50)),
       desc(eff) {
         return `Gain <span class="tooltip detailed">
