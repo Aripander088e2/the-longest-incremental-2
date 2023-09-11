@@ -155,7 +155,7 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Into The Deep",
       // Free to prevent soft-locking
-      cost: () => (D(player.quarry.depth).gte(100) ? D(0) : D(Infinity)),
+      cost: () => (D(player.quarry.depth).gte(100) ? D(0) : D(10000000)),
       eff: () => 1,
       desc(eff) {
         return `Unlock Collapse.<br>
