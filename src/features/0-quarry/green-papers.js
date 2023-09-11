@@ -24,7 +24,6 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Miner Power",
       cost: (lvl) => {
-        lvl = applyScaling(lvl, 20, 2);
         return Decimal.pow(1.3, lvl).mul(1);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
@@ -37,7 +36,6 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Speed Mining",
       cost: (lvl) => {
-        lvl = applyScaling(lvl, 20, 3);
         return Decimal.pow(1.6, lvl).mul(10);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
@@ -50,7 +48,7 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "Fortune Mining",
-      cost: (lvl) => Decimal.pow(2, lvl).mul(100),
+      cost: (lvl) => Decimal.pow(1.85, lvl).mul(100),
       eff: (lvl) => D(lvl).div(10).add(1),
       max: 20,
       desc(eff) {
@@ -81,7 +79,7 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "Ore Luck",
-      cost: (lvl) => Decimal.pow(3, lvl).mul(6000),
+      cost: (lvl) => Decimal.pow(2.25, lvl).mul(4000),
       eff: (lvl) => D(lvl).div(20).add(1),
       max: 20,
       desc(eff) {
@@ -92,7 +90,7 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "Softer Atoms",
-      cost: (lvl) => Decimal.pow(5, lvl).mul(25000),
+      cost: (lvl) => Decimal.pow(3.5, lvl).mul(25000),
       eff: (lvl) => D(1.015).pow(lvl),
       max: 100,
       desc(eff) {
@@ -129,7 +127,7 @@ UPGRADES.GreenPapers = {
     }),
     new Upgrade({
       name: "Clever Marketing",
-      cost: () => D(525000),
+      cost: () => D(225000),
       eff: () => RESOURCES.greenPaper.amt.add(10).log10(),
       desc(eff) {
         return `Gain <span class="tooltip detailed">
