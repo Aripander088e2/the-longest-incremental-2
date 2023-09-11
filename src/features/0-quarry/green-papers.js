@@ -24,7 +24,7 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Miner Power",
       cost: (lvl) => {
-        return Decimal.pow(1.3, lvl).mul(1);
+        return Decimal.pow(1.4, lvl).mul(1);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
       max: 50,
@@ -36,7 +36,7 @@ UPGRADES.GreenPapers = {
     new Upgrade({
       name: "Speed Mining",
       cost: (lvl) => {
-        return Decimal.pow(1.6, lvl).mul(10);
+        return Decimal.pow(1.4, lvl).mul(10);
       },
       eff: (lvl) => D(lvl).div(10).add(1),
       max: 50,
