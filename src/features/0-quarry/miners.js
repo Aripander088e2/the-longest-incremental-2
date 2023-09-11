@@ -181,7 +181,7 @@ BUYABLES.Miners = {
     // @type {Array<Buyable>}
     new Miner({
       name: "Novice Miner",
-      cost: (lvl) => (D(lvl).eq(0) ? D(0) : lvl.pow(4).add(9)),
+      cost: (lvl) => (D(lvl).eq(0) ? D(0) : lvl.pow(2.5).add(9)),
       eff: (lvl) => D(lvl),
       desc(eff) {
         return `to 1 exposed block`;
