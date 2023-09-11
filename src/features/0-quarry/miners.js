@@ -191,7 +191,7 @@ BUYABLES.Miners = {
     }),
     new Miner({
       name: "Stone Miner",
-      cost: (lvl) => lvl.add(1).pow(2.5).add(9),
+      cost: (lvl) => lvl.add(1).pow(2).add(9),
       eff: (lvl) => D(lvl).mul(2),
       desc(eff) {
         return `to 1 exposed non-ore block`;
@@ -206,7 +206,7 @@ BUYABLES.Miners = {
     }),
     new Miner({
       name: "Veining Miner",
-      cost: (lvl) => lvl.add(1).pow(2.5).mul(2).add(98),
+      cost: (lvl) => lvl.add(1).pow(2).mul(2).add(98),
       eff: (lvl) => D(lvl).mul(2),
       desc(eff) {
         return `to 1 block on the highest layer`;
@@ -221,7 +221,7 @@ BUYABLES.Miners = {
     }),
     new Miner({
       name: "Efficient Miner",
-      cost: (lvl) => lvl.add(1).pow(2.5).mul(4).add(996),
+      cost: (lvl) => lvl.add(1).pow(2).mul(4).add(996),
       eff: (lvl) => D(lvl),
       desc(eff) {
         return `to 1 exposed ore block`;
@@ -236,7 +236,7 @@ BUYABLES.Miners = {
     }),
     new Miner({
       name: "Ranged Miner",
-      cost: (lvl) => lvl.add(1).pow(2.5).mul(8).add(9992),
+      cost: (lvl) => lvl.add(1).pow(2).mul(8).add(9992),
       eff: (lvl) => D(lvl).mul(5),
       desc(eff) {
         return `to 1 exposed block + 1/2 damage to 4 adjacent blocks`;
