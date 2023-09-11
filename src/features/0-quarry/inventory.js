@@ -11,7 +11,7 @@ let inventoryMode = ref("usage");
 
 export function obtainInventory(type, data) {
   let array = player.inventory[type];
-  if (Object.keys(array).length >= 100) {
+  if (Object.keys(array).length >= 10000) {
     notify("Max inventory reached!");
   } else {
     array.push(data);
